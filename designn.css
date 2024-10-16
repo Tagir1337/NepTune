@@ -276,3 +276,63 @@
   . :hover {
     background-color: #0496ff; /* Цвет при наведении */
   }
+
+	/* Стиль для музыкального проигрывателя */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+}
+
+.album-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.track-name {
+  font-weight: bold;
+}
+
+.artist-name {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.player-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.control-btn:hover {
+  color: #1db954;
+}
