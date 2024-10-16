@@ -4,26 +4,11 @@ document.getElementById('logo').addEventListener('click', () => {
 });
 
 const profileBtn = document.querySelector('.profile-btn');
-const modal = document.getElementById('modal');
-const closeBtn = document.querySelector('.close-btn');
 
-// Открытие модального окна при нажатии на кнопку "Profile"
+// Открытие страницы changes.html при нажатии на кнопку "Profile"
 profileBtn.addEventListener('click', () => {
-  modal.style.display = 'block';
+  window.location.href = 'changes.html';
 });
-
-// Закрытие модального окна при нажатии на крестик
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// Закрытие модального окна при нажатии вне области окна
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
 
 // Вставка проигрывателя на страницу динамически
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="play.png" alt="Play" class="control-icon">
         </button>
         <button class="control-btn">
-          <img src="next.png" alt="Next" class="control-icon">
+          <img src="https://i.ibb.co.com/dBnXfpQ/prev.png" alt="Next" class="control-icon">
         </button>
       </div>
     </div>
@@ -55,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Логика для переключения кнопки Play/Pause
   const playPauseBtn = document.getElementById('play-pause-btn');
   const playPauseIcon = playPauseBtn.querySelector('img');
-  
+
   let isPlaying = false; // Следим за состоянием воспроизведения
 
   playPauseBtn.addEventListener('click', () => {
@@ -63,10 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
       playPauseIcon.src = 'play.png'; // Меняем изображение на "Play"
       playPauseIcon.alt = 'Play';
     } else {
-      playPauseIcon.src = 'pause.png'; // Меняем изображение на "Pause" 	
+      playPauseIcon.src = 'https://i.ibb.co.com/cTWPDz1/pause.png'; // Меняем изображение на "Pause"
       playPauseIcon.alt = 'Pause';
     }
     isPlaying = !isPlaying; // Переключаем состояние
   });
 });
-
