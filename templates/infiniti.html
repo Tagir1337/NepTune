@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infiniti Z5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+
+
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Add space between buttons */
+            margin: 20px;
+        }
+
+        .home-button a,
+        .contact-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .home-button a {
+            background-color: #000000;
+            color: #f0f0f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-button a:hover {
+            background-color: #495057;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-button {
+            background-color: #000000;
+            color: #f0f0f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-button:hover {
+            background-color: #495057;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .car-container {
+            display: flex;
+            align-items: center; /* Центрирует элементы по вертикали */
+            justify-content: space-between; /* Пространство между изображением и текстом */
+            max-width: 1200px;
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            box-shadow: 0 100px 100px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .car-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .car-image img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            object-fit: cover;
+            border-radius: 15px 0 0 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-details {
+            padding: 40px;
+            flex: 1;
+            background-color: #f0f0f0;
+            border-radius: 0 15px 15px 0;
+
+        }
+
+        .car-details h2 {
+            font-size: 2.5em;
+            color: #000000;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .car-details p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #000000;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .car-container {
+                flex-direction: column;
+                max-width: 90%;
+            }
+
+            .car-image img {
+                border-radius: 15px;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Button Container -->
+    <div class="button-container">
+        <!-- Home Button -->
+        <div class="home-button">
+            <a href="/index">Home</a>
+        </div>
+        <!-- Contact Us Button -->
+        <a href="newsite.html" class="contact-button">Contact Us</a>
+    </div>
+
+    <div class="car-container">
+        <!-- Image Section -->
+        <div class="car-image">
+            <img src="../static/assets/images/featured-cars/fc5.png" alt="cars">
+        </div>
+
+        <!-- Car Details Section -->
+        <div class="car-details">
+            <h2>Infiniti Z5</h2>
+            <p><strong>Year:</strong> 2017</p>
+            <p><strong>Price:</strong> $36850</p>
+            <p>The Infiniti Z5 is a stylish and performance-oriented coupe, powered by a 3.0-liter twin-turbo V6 engine producing 400 horsepower. With its elegant design, luxurious interior, and sporty handling, the Z5 delivers a thrilling yet refined driving experience.</p>
+        </div>
+    </div>
+</body>
+</html>

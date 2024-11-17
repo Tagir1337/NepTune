@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CarVilla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Общий стиль страницы */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Контейнер для всей страницы */
+        .cont {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Кнопка Home */
+        .home-button {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .home-button:hover {
+            transform: translateY(-5px);
+            background-color: black;
+        }
+
+        /* Заголовок */
+        h1 {
+            color: black;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Стили для формы */
+        label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #495057;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: black;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Кнопка Submit */
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #121212;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cont">
+        <!-- Кнопка Home -->
+        <a href="/index" class="home-button">Home</a>
+
+        <div>
+            <h1>Contact Us</h1>
+        </div>
+
+        <form action="/newsite.html" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
