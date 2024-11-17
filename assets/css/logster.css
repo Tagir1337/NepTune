@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.card h2 {
+    color: #ff4c3b;
+    text-align: center;
+}
+
+.card .btn-primary {
+    background-color: #ff4c3b;
+    border-color: #ff4c3b;
+}
+
+.card .btn-primary:hover {
+    background-color: #e63926;
+    border-color: #e63926;
+}
+
+.card a {
+    color: #ff4c3b;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}

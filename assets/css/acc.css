@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 200px;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-info p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.actions ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.actions ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.actions a, .actions button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.actions a:hover, .actions button:hover {
+    background-color: white;
+    color: black;
+}
+
+.actions .btn-warning {
+    background-color: black;
+    color: white;
+}
+
+.actions .btn-warning:hover {
+    background-color: white;
+    color: black;
+}
+
+.user-reviews {
+    margin-top: 30px;
+}
+
+.user-reviews .review {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-reviews .review p {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.user-reviews .review small {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 8px 16px;
+            background-color: black;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-decoration: none;
+            color: white;
+        }
+        .back-button:hover {
+            background-color: white;
+            color: black;
+        }
