@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Account</title>
+    <link rel="stylesheet" href="../static/assets/css/acc.css">
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-button">Back</a> <!-- Back button -->
+
+    <div class="container">
+        <h1>Personal Account</h1>
+
+        {% if user %}
+        <div class="user-info">
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>Email: {{ user.email }}</p>
+        </div>
+
+        <div class="actions">
+            <h3>Your Actions:</h3>
+            <ul>
+                <li><a href="{{ url_for('logout') }}" class="btn btn-warning">Log Out</a></li>
+                <li>
+                    <form action="{{ url_for('update_password') }}" method="POST">
+                        <input type="password" name="new_password" placeholder="Enter new password" required>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+        <div class="user-reviews">
+            <h3>Your Reviews:</h3>
+            {% for review in reviews %}
+            <div class="review">
+                <p>{{ review.comment }}</p>
+                <small>Posted on: {{ review.created_at.strftime('%d %B %Y') }}</small>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>You are not logged in. Please <a href="{{ url_for('login') }}">log in</a>.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

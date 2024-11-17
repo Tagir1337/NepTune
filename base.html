@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarVilla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Центрируем страницу */
+        body, html {
+            height: 100%;
+            margin: 0; /* Убираем отступы */
+            display: flex; /* Flexbox */
+            justify-content: center; /* Горизонтальное центрирование */
+            align-items: center; /* Вертикальное центрирование */
+            background-color: #e9ecef; /* Светлый фон */
+        }
+
+        .card {
+            width: 200%;
+            max-width: 1200px; /* Фиксированная большая ширина */
+            margin: 0 auto; /* Центрирование карточки */
+       Largest Dealership     border-radius: 12px; /* Скругленные углы */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Легкая тень */
+            background-color: #ffffff; /* Белый фон */
+            padding: 30px; /* Внутренние отступы */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Легкое поднятие карточки при наведении */
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #495057; /* Темный цвет для текста */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 50px; /* Скругленные углы кнопки */
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Темный цвет при наведении */
+            border-color: #0056b3;
+        }
+
+        .text-center a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .text-center a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #007bff; /* Синий цвет заголовка */
+        }
+
+        .form-control {
+            border-radius: 8px; /* Скругленные углы для полей ввода */
+            border: 1px solid #ced4da;
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .card-footer {
+            text-align: center;
+        }
+
+        .card-footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        /* Стиль для контейнера уведомлений */
+        .alert-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050; /* Обеспечиваем, что уведомления будут выше других элементов */
+            max-width: 350px;
+            width: 100%;
+        }
+
+        /* Стиль для самих уведомлений */
+        .alert {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: opacity 0.5s ease;
+        }
+
+        .alert-dismissible .close {
+            padding: 1rem;
+            margin: -1rem -1rem -1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Блок для вывода сообщений flash -->
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="alert-container">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
