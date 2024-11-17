@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CarVilla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Центрируем страницу */
+        body, html {
+            height: 100%;
+            display: flex; /* Flexbox */
+            justify-content: center; /* Горизонтальное центрирование */
+            align-items: center; /* Вертикальное центрирование */
+            background-color: #e9ecef; /* Светлый фон */
+            margin: 0; /* Убираем отступы по умолчанию */
+        }
+
+        .card {
+            width: 100%;
+            max-width: 600px; /* Увеличиваем максимальную ширину карточки */
+            border-radius: 12px; /* Скругленные углы */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Легкая тень */
+            background-color: #ffffff; /* Белый фон */
+            padding: 30px; /* Увеличиваем внутренние отступы */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Легкое поднятие карточки при наведении */
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #495057; /* Темный цвет для текста */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 50px; /* Скругленные углы кнопки */
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Темный цвет при наведении */
+            border-color: #0056b3;
+        }
+
+        .text-center a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .text-center a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #007bff; /* Синий цвет заголовка */
+        }
+
+        .form-control {
+            border-radius: 8px; /* Скругленные углы для полей ввода */
+            border: 1px solid #ced4da;
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .card-footer {
+            text-align: center;
+        }
+
+        .card-footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        /* Стиль для контейнера уведомлений */
+        .alert-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050; /* Обеспечиваем, что уведомления будут выше других элементов */
+            max-width: 350px;
+            width: 100%;
+        }
+
+        /* Стиль для самих уведомлений */
+        .alert {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: opacity 0.5s ease;
+        }
+
+        .alert-dismissible .close {
+            padding: 1rem;
+            margin: -1rem -1rem -1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <h2 class="text-center mb-4">Login to Your Account</h2>
+                    <form method="POST" action="/login">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="card-footer">
+                        <p>Don't have an account? <a href="/register">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
